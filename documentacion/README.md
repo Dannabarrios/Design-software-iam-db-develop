@@ -3,8 +3,8 @@
 Esta carpeta permanece separada del código del micro.
 
 - `evidencias/`: pruebas y capturas organizadas por HU.
-- `guias/`: procedimientos generales reutilizables.
+- `guias/`: ejecución local y flujo simplificado de commits en `main`.
 - `matriz-trazabilidad.md`: relación entre Issue, ramas, cambios, evidencia y Pull Request.
 
-La descripción oficial y el estado de cada HU viven en GitHub Issues y GitHub Projects.
+Cada HU se relaciona con un commit individual y su Markdown de evidencia.
 
