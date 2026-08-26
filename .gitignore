@@ -1,0 +1,16 @@
+# Archivos locales y sensibles
+.env
+.env.*
+!.env.example
+liquibase.properties
+
+# Archivos temporales
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+
+# Editores
+.idea/
+.vscode/
+
