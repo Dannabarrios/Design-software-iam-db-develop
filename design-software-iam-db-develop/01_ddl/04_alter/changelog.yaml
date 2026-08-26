@@ -80,3 +80,21 @@ databaseChangeLog:
         - sqlFile: {path: 951_quality_polish.sql, relativeToChangelogFile: true, splitStatements: true, stripComments: false}
       rollback:
         - sql: {sql: "DROP INDEX IF EXISTS identity.uq_user_email_lower;"}
+
+  - changeSet:
+      id: hu-iam-003-password-lifecycle-001
+      author: Dannabarrios
+      labels: "HU-IAM-003,ddl,password"
+      comment: Soporta contraseña temporal, cambio obligatorio y control de solicitudes de reset.
+      changes:
+        - sqlFile:
+            path: 006_add_password_lifecycle.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
+      rollback:
+        - sqlFile:
+            path: ../../05_rollbacks/01_ddl/04_alter/006_add_password_lifecycle.rollback.sql
+            relativeToChangelogFile: true
+            splitStatements: true
+            stripComments: false
